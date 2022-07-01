@@ -13,9 +13,6 @@
 
   <ItemGroup>
     <Folder Include="Enums\" />
-    <Folder Include="Models\Filters\" />
-    <Folder Include="Models\Raports\" />
-    <Folder Include="Services\Bases\" />
   </ItemGroup>
 
 </Project>

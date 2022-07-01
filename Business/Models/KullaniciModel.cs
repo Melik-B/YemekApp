@@ -23,7 +23,7 @@ namespace Business.Models
         [MaxLength(15, ErrorMessage = "{0} en çok {1} karakter olmalıdır!")]
         [DisplayName("Kullanıcı Adı")]
         public string KullaniciAdi { get; set; }
-
+        
         [Required(ErrorMessage = "{0} gereklidir!")]
         [StringLength(10, ErrorMessage = "{0} en fazla {1} karakter olmalıdır!")]
         [DisplayName("Şifre")]
