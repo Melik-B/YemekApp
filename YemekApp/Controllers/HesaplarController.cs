@@ -43,7 +43,7 @@ namespace YemekApp.Controllers
                     {
                         new Claim(ClaimTypes.Name, result.Data.Adi),
                         new Claim(ClaimTypes.Surname, result.Data.Soyadi),
-                        new Claim(ClaimTypes.userName result.Data.KullaniciAdi),
+                        //new Claim(ClaimTypes.userName, result.Data.KullaniciAdi),
                         new Claim(ClaimTypes.Role, result.Data.RolAdiDisplay),
                         new Claim(ClaimTypes.Email, result.Data.KullaniciDetayi.Eposta), // istenirse Email gibi claim tipleri üzerinden kullanıcının e-posta'sı gibi claim'ler eklenebilir
                         new Claim(ClaimTypes.Sid, result.Data.Id.ToString())
@@ -60,7 +60,7 @@ namespace YemekApp.Controllers
 
         public async Task<IActionResult> Cikis()
         {
-            await HttpContent.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Index", "Home");
         }
     }
